@@ -1,0 +1,29 @@
+
+
+:host
+    width: 100%
+    
+.pagination-wrapper
+    display: flex
+    justify-content: center
+
+
+.pagination__num
+    color: inherit
+    padding: .5em
+    border: 1px solid 
+    user-select: none
+    cursor: pointer
+    outline: none
+    background: none
+    &:not(:last-child)
+        margin-right: 1vw
+    &:last-child
+        margin-left: 1vw
+    &:first-child
+        margin-right: 2vw
+
+
+.pagination__last
+    align-self: flex-end
+    user-select: none

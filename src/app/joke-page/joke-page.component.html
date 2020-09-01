@@ -1,0 +1,27 @@
+<div *ngIf="viewJokes" class="fade-in">
+    <div class="joke-page-wrapper">
+
+        <div *ngFor="let item of viewJokes" class="joke-page__joke-wrapper">
+            <p class="joke-page__joke" [routerLink]="['/joke-detail/', item.id]">
+                {{ item.id }}: {{ cropJoke(item.joke) }}
+            </p>
+        </div>
+
+        <div class="joke-page__search">
+            <label for="search" class="label-search">Search</label>
+            <input type="search" id="search" (input)="search($event.target.value)">
+        </div>
+
+        <div class="joke-page__search-list">
+            <p *ngFor="let searchItem of searchList" class="joke-page__joke joke-page__search-joke"
+                [routerLink]="['/joke-detail/', searchItem.id]">
+                {{ searchItem.joke }}
+            </p>
+        </div>
+
+    </div>
+
+    <app-pagination *ngIf="jokeList" [list]="jokeList.value" (newList)="viewJokes = $event"
+        class="joke-page__pagination">
+    </app-pagination>
+</div>

@@ -1,0 +1,22 @@
+<div *ngIf="paginationList" class="pagination-wrapper">
+
+    <button class="pagination__num" (click)="prev()">
+        previous
+    </button>
+
+    <button class="pagination__num" (click)="createPagination(1)">
+        1
+    </button>
+
+    <button *ngFor="let num of paginationList" class="pagination__num" (click)="createPagination(num)">
+        {{ num }}
+    </button>
+
+    <span class="pagination__last">
+        ...
+    </span>
+
+    <button class="pagination__num" (click)="createPagination(last)">
+        {{ last }}
+    </button>
+</div>

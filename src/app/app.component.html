@@ -1,0 +1,15 @@
+<div class="change-theme__buttons-wrapper">
+    <label for="white" class="label">
+        White Theme
+    </label>
+    <input type="radio" class="radio" name="radio" id="white" (input)="changeTheme()" #whiteButton>
+</div>
+<div class="change-theme__buttons-wrapper">
+    <label for="black" class="label">
+        Black Theme
+    </label>
+    <input type="radio" class="radio" name="radio" id="black" (input)="changeTheme()" #blackButton>
+</div>
+
+
+<router-outlet></router-outlet>

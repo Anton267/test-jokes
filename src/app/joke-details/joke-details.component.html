@@ -1,0 +1,7 @@
+<div *ngIf="joke" class="joke-details-wrapper fade-in">
+    <p class="joke__details">
+        {{ joke }}
+    </p>
+    <button [routerLink]="['/joke']" class="joke-details__back-button">
+        back</button>
+</div>
